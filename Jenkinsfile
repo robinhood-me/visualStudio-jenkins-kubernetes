@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage('test') {
             steps {
+                echo "Robin did it"
                 sh "echo running tests"
+                sh "hostname"
+                sh "uptime"
+                sh "df -h"
             }
         }
         stage('build') {
