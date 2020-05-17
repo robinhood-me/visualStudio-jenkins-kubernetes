@@ -1,22 +1,19 @@
 pipeline {
-    agent any
+    agent {label 'master'}
     stages {
         stage('test') {
             steps {
-                bash '''#!/bin/bash"
-                    echo 'running tests'
+                sh "echo running tests"
             }
         }
         stage('build') {
             steps {
-                bash '''#!/bin/bash"
-                    echo 'building App'
+                sh "echo Building App"
             }
         }
         stage('deploy') {
-            steps {
-                bash '''#!/bin/bash"
-                    echo 'Hello World'
+           steps {
+                sh "echo deploying"
             }
         }
     }
