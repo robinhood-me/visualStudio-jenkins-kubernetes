@@ -9,12 +9,14 @@ pipeline {
         }
         stage('build') {
             steps {
-                echo 'building App'
+                sh "#!/bin/bash \n" +
+                    echo 'building App'
             }
         }
         stage('deploy') {
             steps {
-                echo 'Hello World'
+                sh "#!/bin/bash \n" +
+                    echo 'Hello World'
             }
         }
     }
