@@ -3,19 +3,19 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh "#!/bin/bash \n" +
+                bash '''#!/bin/bash"
                     echo 'running tests'
             }
         }
         stage('build') {
             steps {
-                sh "#!/bin/bash \n" +
+                bash '''#!/bin/bash"
                     echo 'building App'
             }
         }
         stage('deploy') {
             steps {
-                sh "#!/bin/bash \n" +
+                bash '''#!/bin/bash"
                     echo 'Hello World'
             }
         }
