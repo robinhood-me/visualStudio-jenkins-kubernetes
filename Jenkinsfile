@@ -13,7 +13,10 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo Building App"
-                bash "hostname"
+                sh '''
+                    #!/bin/bash
+                    "hostname"
+                '''
             }
         }
         stage('deploy') {
