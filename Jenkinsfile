@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                echo 'running tests'
+                sh "#!/bin/bash \n" +
+                    echo 'running tests'
             }
         }
         stage('build') {
