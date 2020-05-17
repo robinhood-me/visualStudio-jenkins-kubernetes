@@ -22,6 +22,7 @@ pipeline {
         stage('deploy') {
            steps {
                 sh "echo deploying"
+                sh "free"
             }
         }
     }
